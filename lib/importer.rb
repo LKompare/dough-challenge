@@ -30,7 +30,6 @@ class ImportData
 								  sector: row_hash["Sector"], 
 								  industry: row_hash["industry"])
 	 		company.save!
-	 		p company
 	 		counter += 1 if company.persisted? 
 	    end
 
