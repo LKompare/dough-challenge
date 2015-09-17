@@ -1,0 +1,7 @@
+<% @companies.each do |company| %>
+	<BR><BR>
+    <tr>
+      <td><a href="/companies/<%= company.id %>"><%= company.symbol %></a></td>
+      <td><%= company.name %></td>
+    </tr>
+ <% end %>
