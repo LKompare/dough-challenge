@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+.main-title {
+	text-align: center;
+	color: #FFA500;
+	font-family: 'Comfortaa', cursive;
+}
+
+#search-form {
+	text-align: right;
+}
+
+.info {
+	font-family: 'Open Sans', sans-serif;
+}
