@@ -1,16 +1,25 @@
 <div class="row">
-	<%= @company.name %>
-	<BR><BR>
-	Trading Symbol: <%= @company.symbol %>
-	<BR><BR>
-	Market Cap: <%= @company.market_cap %>
-	<BR><BR>
-	<% if @company.sector != nil %>
-	Sector: <%= @company.sector %>
-	<% end %>
-	<BR><BR>
-	Industry: <%= @company.industry %>
-	<BR><BR>
-	Daily average of market open, close, low, and high for the last month:
-	<%= @average_price %>
+ <div class="col-md-7 col-md-offset-2">
+	 <h1 class="main-title"><%= @company.name %></h1>	
+				<span class="info"><b>Trading Symbol:</b> <%= @company.symbol %></span>
+				<BR><BR>
+				<span class="info"><B>Market Cap:</B> <%= @company.market_cap %></span>
+				<BR><BR>
+				<% if @company.sector != nil %>
+				<span class="info"><B>Sector:</B> <%= @company.sector %></span>
+				<% end %>
+				<BR><BR>
+				<span class="info"><B>Industry:</B> <%= @company.industry %></span>
+				<BR><BR>
+				<span class="info"><B>Daily average of market open, close, low, and high for the last month:</B>
+				<BR>
+				<% @average_price.each do |price| %>
+				<BR>
+				<%= p price %>
+				<BR>
+				<% end %>
+				
+		</table>
+
+ </div>
 </div>

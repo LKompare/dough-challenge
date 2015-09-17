@@ -1,14 +1,15 @@
-
- <div class="row">
-  <div class="col-md-8">Big Column</div>
-  <div class="col-md-4">
-  	<form action="search_results" method="POST">
-        <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
-         <div>
-            <input id="search" name="search_term" type="search" placeholder="Search" required>
-            <BR><BR>
-            <input type="submit">
-         </div>
-    </form>
+<div class="row">
+ <div class="col-md-7 col-md-offset-2">
+    <h1 class="main-title">ENTER A SYMBOL OR A COMPANY NAME</h1>
+    	<div class="form-group">
+      <form action="search_results" id="search-form" method="POST">
+          <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
+           <div>
+              <input class="form-control" name="search_term" type="search" placeholder="Search" required>
+              <BR><BR>
+              <input class="btn btn-default" type="submit">
+           </div>
+      </form>
+      </div>
   </div>
 </div>

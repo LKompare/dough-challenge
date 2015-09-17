@@ -1,28 +1,24 @@
 == Dough Coding Challenge
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This simple stock app allows you to enter a full or partial symbol or company name, and then see its exchange data and the current average historical prices for the last trading month. 
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+If there are any issues, please contact me.
+
+To get this app up and running, follow the instructions below:
+
+- This app runs on the current version of Ruby and Rails. Please see the documentation if you do not have them currently set up on your computer. 
+
+1. Clone the repo into an appropriate folder on your local machine, then change directories ('cd') to the file.
+
+2. Prep the app by running this command 'bundle install'
+
+3. Copy the following into your command line 
+
+	' be rake db:create && be rake db:migrate && be rake db:import'
+
+	It may take a few moments, but you should see the migration process, and then be notified how many companies from each exchange file are being imported.
+
+4. Go ahead and start the rails server to get the localhost running by using 'rails s'
+
+5. Open a browser (perferably Chrome) and input the url: http://localhost:3000/
