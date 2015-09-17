@@ -1,8 +1,16 @@
 <div class="row">
 	<%= @company.name %>
 	<BR><BR>
-	<%= @company.symbol %>
-
+	Trading Symbol: <%= @company.symbol %>
 	<BR><BR>
-	<%= @data %>
+	Market Cap: <%= @company.market_cap %>
+	<BR><BR>
+	<% if @company.sector != nil %>
+	Sector: <%= @company.sector %>
+	<% end %>
+	<BR><BR>
+	Industry: <%= @company.industry %>
+	<BR><BR>
+	Daily average of market open, close, low, and high for the last month:
+	<%= @average_price %>
 </div>
