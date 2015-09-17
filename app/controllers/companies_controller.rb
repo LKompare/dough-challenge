@@ -16,7 +16,7 @@ class CompaniesController < ApplicationController
 	def show
 		@company = Company.find_by(id: params[:id])
 		yahoo_client = YahooFinance::Client.new
-		data = yahoo_client.historical_quotes(@company.symbol)
+		@data = yahoo_client.historical_quotes(@company.symbol)
 	end
 	
 end
